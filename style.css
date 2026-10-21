@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===================================================
+   PALETA DE CORES CRAZY DIAMOND (ANIMAÇÃO EM LOOP)
+   =================================================== */
+
+/* Animação para os textos sobre fundo escuro/rosa (Sidebar e Botão) */
+@keyframes textoCrazyDiamondLuminoso {
+  0%   { color: #ffffff; }
+  20%  { color: #70d6ff; } /* Azul ciano / Diamante */
+  40%  { color: #ffd166; } /* Amarelo dourado (Acessórios) */
+  60%  { color: #ff9ebb; } /* Rosa claro */
+  80%  { color: #e0aaff; } /* Roxo claro */
+  100% { color: #ffffff; }
+}
+
+/* Animação para os textos da área do formulário (Lado Direito) */
+@keyframes textoCrazyDiamondEscuro {
+  0%   { color: #2b2d42; } /* Cinza escuro / Armadura */
+  25%  { color: #d80032; } /* Rosa/Magenta vibrante do Crazy Diamond */
+  50%  { color: #0077b6; } /* Azul ciano profundo */
+  75%  { color: #6a040f; } /* Vinho / Roxo */
+  100% { color: #2b2d42; }
+}
+
+/* Fundo da tela em Ciano Prateado (Estilo Diamante) */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #00b4d8;
+  background: linear-gradient(135deg, #00b4d8 0%, #90e0ef 50%, #d80032 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container do Cartão Principal */
+.container {
+  width: 100%;
+  max-width: 950px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(216, 0, 50, 0.25);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #e0aaff;
+}
+
+/* ===================================================
+   LADO ESQUERDO (SIDEBAR CRAZY DIAMOND)
+   =================================================== */
+.sidebar {
+  flex: 0.85;
+  background-color: #d80032;
+  /* Overlay rosa-magenta sobre a imagem unbreanking.jpg */
+  background-image: linear-gradient(rgba(216, 0, 50, 0.75), rgba(106, 4, 15, 0.85)), url('./unbreanking.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Estilização e Animação da Logo */
+.sidebar .logo h6 {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.4;
+  animation: textoCrazyDiamondLuminoso 5s infinite linear;
+}
+
+.sidebar .logo h1 {
+  font-size: 24px;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 2px;
+  animation: textoCrazyDiamondLuminoso 5s infinite linear;
+}
+
+.sidebar .logo h1 span {
+  font-weight: 700;
+  animation: textoCrazyDiamondLuminoso 5s infinite linear;
+}
+
+/* Mensagem de Boas-Vindas */
+.welcome-text h1,
+.welcome-text h1 strong,
+.welcome-text p {
+  line-height: 1.3;
+  animation: textoCrazyDiamondLuminoso 5s infinite linear;
+}
+
+.welcome-text h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.welcome-text h1 strong {
+  font-size: 32px;
+  font-weight: 600;
+  display: block;
+}
+
+/* ===================================================
+   LADO DIREITO (ÁREA DO FORMULÁRIO BRANCO)
+   =================================================== */
+.form-area {
+  flex: 1.15;
+  padding: 40px 45px;
+  background-color: #ffffff !important;
+}
+
+.form-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+.form-header p {
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 25px;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+.form-header a {
+  text-decoration: none;
+  font-weight: 600;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+/* Títulos das Seções */
+.form-section h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  background: none;
+  padding: 0;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels e Inputs */
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #caf0f8;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #f8f9fa;
+  outline: none;
+  transition: border-color 0.2s;
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+}
+
+.input-group input::placeholder {
+  animation: textoCrazyDiamondEscuro 5s infinite linear;
+  opacity: 0.6;
+}
+
+/* Efeito ao focar no campo (Borda Rosa Crazy Diamond) */
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #d80032;
+  background-color: #ffffff;
+}
+
+/* Botão Cadastrar (Magenta com Hover Dourado) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #d80032 0%, #00b4d8 100%);
+  border: none;
+  padding: 12px 45px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(216, 0, 50, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: textoCrazyDiamondLuminoso 5s infinite linear;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 180, 216, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}

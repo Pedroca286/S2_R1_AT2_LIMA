@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+      
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Consultorio JOJO</h1>
+            </div>
+            <div class="sidebar-image">
+        <img src="./unbreanking.jpg" alt="Crazy Diamond - JoJo">
+    </div>
+            
+            <div class="welcome-text">
+                <h1><strong>Bem-vindo</strong>Venha ver qual o seu stand</h1>
+                    <p class="subtitle"></p>
+            </div>
+
+            <aside class="sidebar">
+            <div class="logo">
+                <h4>Informe seus dados ao lado e desfrute do melhor MUDA MUDA MUDA MUDA, Za Warudo !</h4>
+            </div>
+            
+
+        </aside>
+
+        <!-- Formulário Direita -->
+        <main class="form-area">
+            <header class="form-header">
+                <h2>Cadastro</h2>
+                <p>Já tem uma conta? <a href="./src/login_page/login.html">Entre aqui</a></p>
+            </header>
+
+            <form action="./src/login_page/login.html" method="GET">
+                
+
+                <div class="form-section">
+    <h3>Dados Pessoais</h3>
+    
+    <div class="grid-layout">
+        <div class="input-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Ex: Pedro Silva" required>
+        </div>
+
+        <div class="input-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="input-group">
+            <label for="email_login">E-mail</label>
+            <input type="email" id="email_login" placeholder="Informe o seu e-mail" required>
+        </div>
+
+        <div class="input-group">
+            <label for="senha_login">Senha</label> 
+            <input type="password" id="senha_login" placeholder="Sua senha secreta" required> 
+        </div>
+    </div>
+</div>
+
+<div class="form-section">
+    <h3>Dados Profissionais</h3>
+
+    <div class="grid-layout">
+        <div class="input-group">
+            <label for="conselho">Sigla do Conselho</label>
+            <select id="conselho">
+                <option value="">Selecione o seu Conselho</option>
+                <option value="CRM">Conselho Regional de Medicina (CRM)</option>
+                <option value="CRO">Conselho Regional de Odontologia (CRO)</option>
+                <option value="COREN">Conselho Regional de Enfermagem (COREN)</option>
+                <option value="CRP">Conselho Regional de Psicologia (CRP)</option>
+                <option value="CRA">Conselho Regional de Administração (CRA)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="sigla">UF</label>
+            <select id="sigla">
+                <option value="">Selecione o seu Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="numero_conselho">Número do Conselho</label>
+            <input type="text" id="numero_conselho" placeholder="Informe o número do conselho">
+        </div>
+
+        <div class="input-group">
+            <label for="Especialidade">Especialidade</label>
+            <input type="text" id="Especialidade" placeholder="Informe a sua especialidade">
+        </div>
+    </div>
+</div>
+
+<div class="button-container">
+    <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+</div>
+
+            </form>
+        </main>
+
+    </div>
+    
+</body>
+</html>
